@@ -44,8 +44,6 @@ def get_objects():
     # execute the SQL query to retrieve the list of objects for the selected area
     query = ("SELECT * FROM objects WHERE area = %s")
     cursor.execute(query, (area,))
-    print("here is the curosr:")
-    print(cursor)
 
     # retrieve the results and create a list of objects
     objects = []
