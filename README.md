@@ -1,6 +1,4 @@
-Certainly! Here's the revised README for your "Concept Map Creation Tool" project incorporating the database setup details and removing the testing section:
 
----
 
 # Concept Map Creation Tool
 
@@ -8,9 +6,6 @@ Certainly! Here's the revised README for your "Concept Map Creation Tool" projec
 
 The Concept Map Creation Tool is designed to help users create customizable concept maps on any topic, facilitating easier understanding and presentation of information. This tool aims to enhance the learning experience for students by visually organizing concepts and their interconnections.
 
-## Live Demo
-
-[Click here to view a live demo of the application](#) (if available).
 
 ## Technologies Used
 
@@ -107,26 +102,3 @@ Follow these step-by-step instructions to set up your development environment:
 
    This should open the application on `localhost:3000`.
 
-### Usage
-
-Detailed instructions and video demonstrations on how to use the Concept Map Creation Tool can be found here:
-
-[User Guide and Video Demonstrations](#)
-
-## Contributing
-
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-- Inspiration from educational tools
-- Anyone who contributed code and ideas
-- Community feedback
-
----
-
-This updated README is now more concise and reflects the actual structure and setup steps for your project.
