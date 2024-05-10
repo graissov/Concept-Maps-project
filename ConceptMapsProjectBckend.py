@@ -7,28 +7,22 @@ import mysql.connector
 
 app = Flask(__name__)
 
-#Creating a connection cursor
+
 CORS(app)
 
 @app.route('/areas', methods=['GET', 'POST'])
 def get_areas():
-    # connect to the database
     cnx = mysql.connector.connect(user='root', password='',
                                   host='127.0.0.1', database='concept_maps')
     cursor = cnx.cursor()
 
-    # execute the SQL query to retrieve the list of areas
     query = ("SELECT DISTINCT area FROM objects")
     cursor.execute(query)
-
-    # retrieve the results and create a list of areas
     areas = [area[0] for area in cursor]
 
-    # close the database connection
     cursor.close()
     cnx.close()
 
-    # return the list of areas as JSON
     return jsonify(areas)
 
 @app.route('/objects', methods=['GET', 'POST'])
@@ -45,13 +39,11 @@ def get_objects():
     query = ("SELECT * FROM objects WHERE area = %s")
     cursor.execute(query, (area,))
 
-    # retrieve the results and create a list of objects
     objects = []
     for (id, parent_id, title, areas, related_concepts) in cursor:
         obj = {"id": id, "parent_id": parent_id, "title": title, "info": "some info"}
         objects.append(obj)
 
-    # close the database connection
     cursor.close()
     cnx.close()
 
