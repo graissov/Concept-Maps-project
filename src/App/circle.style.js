@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ParentContainer = styled.div`
   position: relative;
-  width: 100%; /* Adjust as needed */
-  height: 100%; /* Adjust as needed */
+  width: 100%; 
+  height: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +31,8 @@ export const CenterCircle = styled.div`
 export const CenterText = styled.div`
   font-size: 18px;
   color: #FFFFB4;
-  width: auto; /* Adjusted width */
-  white-space: nowrap; /* Prevent line breaks */
+  width: auto; 
+  white-space: nowrap; 
   text-align: center;
   line-height: 50px;
   font-family: 'Poppins', sans-serif;
