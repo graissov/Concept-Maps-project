@@ -51,7 +51,7 @@ export const App = () => {
       console.log(isVisible)
       return {
         ...card,
-        visible: isVisible, // Update visibility
+        visible: isVisible, 
       };
     });
     console.log("here");
@@ -68,18 +68,18 @@ export const App = () => {
     object.isCenter = true;
     setClickedObject(object);
     console.log(objects);
-    // setDivToRender(<ConceptMap object={object} allobjects={objects}/>)//(<Circle object={object}/>);
+    
     };
 
     useEffect(() => {
       if(clickedObject){
         setDivToRender(<ConceptMap object={clickedObject} allobjects={objects}/>)
       }
-      // Your code that depends on objects here
-      console.log(objects,clickedObject,'lol'); // Example usage of objects state
+      
+      console.log(objects,clickedObject,'lol'); 
     }, [objects, clickedObject]);
     
-  // Rest of the App component code...
+  
 
   return (
     <div style={{ 
@@ -168,11 +168,11 @@ const ConceptMap = ({ object, allobjects }) => {
   const [divPosition, setDivPosition] = useState({ left: 0, top: 0 });
 
   useEffect(() => {
-    // Calculate the center coordinates
+    
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-    const componentWidth = 0; // Replace with the actual width of your component
-    const componentHeight = 0; // Replace with the actual height of your component
+    const componentWidth = 0; 
+    const componentHeight = 0; 
   
     const left = (screenWidth - componentWidth) / 2;
     const top = (screenHeight - componentHeight) / 2;
@@ -261,7 +261,7 @@ const Main = ({ object, allobjects, circlestorender=[], revert}) => {
     let updatedList = [];
     let angle = 0;
 		for (let i = 0; i < n; i++) {
-			//geometry
+			
       if (object.parent){     
       if (i===0) {angle = calculateAngle(object)-(1 / (n)) * Math.PI}
       else {angle = angle + (1 / (n)) * Math.PI * 2;}
@@ -389,7 +389,7 @@ const Circle = ({ object, onclick }) => {
 },[]);
 
 function handleTextClick(event) {
-  event.stopPropagation(); // Stop the event from propagating to the parent elements
+  event.stopPropagation(); 
 }
 
 return (
@@ -402,7 +402,7 @@ return (
           vector={[0, -100]}
           onMouseEnter={showPopup}
           onMouseLeave={closeModal}
-          onClick={handleTextClick} // Add onClick event handler for the text
+          onClick={handleTextClick} 
         >
           {object.title}
           {isOpen && <button onClick={showModul} className="infobtn">Learn More</button>
@@ -414,7 +414,7 @@ return (
           vector={object.vector}
           onMouseEnter={showPopup}
           onMouseLeave={closeModal}
-          onClick={handleTextClick} // Add onClick event handler for the text
+          onClick={handleTextClick} 
         >
           {object.title}
           {isOpen &&       <button onClick={showModul}className="infobtn">Learn More</button>
@@ -458,12 +458,7 @@ const Modal = (startOpen) => {
             </div>
             <div className="modal-body">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum
-                ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus,
-                consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor
-                ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque!
-                Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure!
-                Eligendi, eius libero. Ex, repellat sapiente!
+                Information about the selected concept
               </p>
             </div>
           </div>
